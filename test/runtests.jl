@@ -1,5 +1,8 @@
 push!(LOAD_PATH, "../src")
 
+using Pkg
+Pkg.develop(PackageSpec(; path=joinpath(@__DIR__, "..", "lib", "CellArraysCore")))
+
 import CellArrays # Precompile it.
 
 excludedfiles = [ "test_excluded.jl"];
